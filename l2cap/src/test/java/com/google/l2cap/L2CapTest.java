@@ -17,6 +17,6 @@ public final class L2CapTest {
     Context context = ApplicationProvider.getApplicationContext();
     BluetoothAdapter adapter = context.getSystemService(BluetoothManager.class).getAdapter();
     // This will incur java.lang.NoSuchMethodError.
-    // adapter.listenUsingInsecureL2capChannel();
+    adapter.listenUsingInsecureL2capChannel();
   }
 }

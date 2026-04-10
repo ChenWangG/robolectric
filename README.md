@@ -1,6 +1,9 @@
 Used to test the open-sourced robolectric from
 https://github.com/robolectric/robolectric.
 
+To test:
+./gradlew clean && ./gradlew test
+
 After clone the repo, you need to add a file local.properties
 under the same directory of this README with a line as bleow.
 
