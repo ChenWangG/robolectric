@@ -1,0 +1,28 @@
+[versions]
+agp = "9.0.1"
+junit = "4.13.2"
+junitVersion = "1.3.0"
+espressoCore = "3.7.0"
+appcompat = "1.7.1"
+material = "1.13.0"
+androidxTest = "1.7.0"
+protobufJava = "4.34.0"
+robolectric = "4.16.1"
+androidxTestRunner = "1.1.0"
+androidxTestOrchestrator = "1.1.0"
+
+[libraries]
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-test = { group = "androidx.test", name = "core", version.ref = "androidxTest" }
+androidx-test-runner = { group = "androidx.test", name = "runner", version.ref = "androidxTestRunner" }
+androidx-test-orchestrator = { group = "androidx.test", name = "orchestrator", version.ref = "androidxTestOrchestrator" }
+protobuf-java = { group = "com.google.protobuf", name = "protobuf-java", version.ref = "protobufJava"}
+robolectric = { group = "org.robolectric", name = "robolectric", version.ref = "robolectric" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+
