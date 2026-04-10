@@ -16,7 +16,7 @@ plugins {
 }
 
 android {
-    namespace 'com.google.l2cap'
+    namespace = 'com.google.l2cap'
     compileSdk {
         version = release(36)
     }
