@@ -9,14 +9,16 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 import java.io.IOException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.robolectric.annotation.Config;
 
 /** Robolectric test. */
 @RunWith(AndroidJUnit4.class)
+@Config(sdk = 36)
 public final class L2CapTest {
   @Test
   public void testL2cap() throws IOException {
     int sdkVersion = android.os.Build.VERSION.SDK_INT;
-    assert(sdkVersion == 23);
+    assert(sdkVersion == 36);
     Log.e("SDK_VERSION", "API Level: " + sdkVersion);
     Context context = ApplicationProvider.getApplicationContext();
     BluetoothAdapter adapter = context.getSystemService(BluetoothManager.class).getAdapter();
