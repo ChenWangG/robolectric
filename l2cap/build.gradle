@@ -26,6 +26,25 @@ android {
         targetSdk 36
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+    testOptions {
+        unitTests.all {
+            systemProperty 'robolectric.logging.enabled', 'true'
+        }
+    }
+}
+
+tasks.withType(Test) {
+    testLogging {
+        // Show standard out and standard error of the test JVM(s) on the console
+        showStandardStreams = true
+
+        // Specify which events to log
+        events "started", "skipped", "failed", "passed"
+
+        // Control detail level for exceptions
+        exceptionFormat = "full"
+    }
 }
 
 
