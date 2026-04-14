@@ -13,12 +13,13 @@ import org.robolectric.annotation.Config;
 
 /** Robolectric test. */
 @RunWith(AndroidJUnit4.class)
-@Config(sdk = 36)
 public final class L2CapTest {
   @Test
   public void testL2cap() throws IOException {
     int sdkVersion = android.os.Build.VERSION.SDK_INT;
     assert(sdkVersion == 36);
+    Log.e("L2CAP_TEST", "Log Android SDK version: ");
+    System.out.println("System out print Android SDK version: ");
     Context context = ApplicationProvider.getApplicationContext();
     BluetoothAdapter adapter = context.getSystemService(BluetoothManager.class).getAdapter();
     // This is supported only after sdk version 29.

@@ -32,6 +32,9 @@ android {
     }
 
     testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
         unitTests.all {
             systemProperty 'robolectric.logging.enabled', 'true'
         }
@@ -40,6 +43,8 @@ android {
 
 tasks.withType(Test).configureEach {
     testLogging {
+        showStandardStreams = true
+
         // set options for log level LIFECYCLE
         events TestLogEvent.FAILED,
                 TestLogEvent.PASSED,
