@@ -19,10 +19,9 @@ public final class L2CapTest {
   public void testL2cap() throws IOException {
     int sdkVersion = android.os.Build.VERSION.SDK_INT;
     assert(sdkVersion == 36);
-    Log.e("SDK_VERSION", "API Level: " + sdkVersion);
     Context context = ApplicationProvider.getApplicationContext();
     BluetoothAdapter adapter = context.getSystemService(BluetoothManager.class).getAdapter();
-    // This will incur java.lang.NoSuchMethodError.
+    // This is supported only after sdk version 29.
     adapter.listenUsingInsecureL2capChannel();
   }
 }
