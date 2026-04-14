@@ -3,6 +3,7 @@ package com.google.l2cap;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothManager;
 import android.content.Context;
+import android.util.Log;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import java.io.IOException;
@@ -14,6 +15,9 @@ import org.junit.runner.RunWith;
 public final class L2CapTest {
   @Test
   public void testL2cap() throws IOException {
+    int sdkVersion = android.os.Build.VERSION.SDK_INT;
+    assert(sdkVersion == 23);
+    Log.e("SDK_VERSION", "API Level: " + sdkVersion);
     Context context = ApplicationProvider.getApplicationContext();
     BluetoothAdapter adapter = context.getSystemService(BluetoothManager.class).getAdapter();
     // This will incur java.lang.NoSuchMethodError.
